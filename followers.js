@@ -46,7 +46,6 @@ var getFollowing = setInterval(function () {
 
 function getNonFollowers () {
 	if(a === true && b === true){
-
 		var notfollowing = [];
 		$.each(following, function(id, value){
 		  if ($.inArray(value,followers) == -1) {
