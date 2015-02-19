@@ -46,12 +46,14 @@ var getFollowing = setInterval(function () {
 
 function getNonFollowers () {
 	if(a === true && b === true){
-		//http://stackoverflow.com/questions/2963281/javascript-algorithm-to-find-elements-in-array-that-are-not-in-another-array/2963291#2963291
-		var notfollowing = $.grep(following, function(el){return $.inArray(el, followers) == -1}); 
-		console.log(notfollowing);
-		if(notfollowing.length === 0){
-			notfollowing = $.grep(followers, function(el){return $.inArray(el, following) == -1}); 
-		}
+
+		var notfollowing = [];
+		$.each(following, function(id, value){
+		  if ($.inArray(value,followers) == -1) {
+		    notfollowing.push(value);
+		  }
+		});
+
 		console.log(notfollowing);
 		$.each(notfollowing, function(i, user){
 			var d = confirm("Do you want to unfollow " + user + "?");
