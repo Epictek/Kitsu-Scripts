@@ -16,7 +16,7 @@ var a = false;
 var getFollowers = setInterval(function() {
     $.get("https://hummingbird.me/users?followers_of=" + username + "&page=" + followerspage, function(data) {
         console.log(data);
-        if(data.users.length === 0) {
+        if (data.users.length === 0) {
             clearInterval(getFollowers);
             a = true;
             getNonFollowers();
@@ -37,7 +37,7 @@ var b = false;
 var getFollowing = setInterval(function() {
     $.get("https://hummingbird.me/users?followed_by=" + username + "&page=" + followingpage, function(data) {
         console.log(data);
-        if(data.users.length === 0) {
+        if (data.users.length === 0) {
             clearInterval(getFollowing);
             b = true;
             getNonFollowers();
@@ -52,17 +52,17 @@ var getFollowing = setInterval(function() {
 }, 500);
 
 function getNonFollowers() {
-    if(a === true && b === true) {
+    if (a === true && b === true) {
         var nonFollowers = [];
         $.each(following, function(i, value) {
-            if($.inArray(value, followers) == -1) {
+            if ($.inArray(value, followers) == -1) {
                 nonFollowers.push(value);
                 console.log("Non follower: " + value);
             }
         });
         console.log(nonFollowers);
         $.each(nonFollowers, function(i, user) {
-            if(confirm("Do you want to unfollow " + user + "?")){
+            if (confirm("Do you want to unfollow " + user + "?")){
                 $.post("https://hummingbird.me/users/" + user + "/follow")
             }
         });
