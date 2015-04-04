@@ -28,7 +28,6 @@ function removePosts(){
 function removeComments () {
 	$.each($('.reply'), function(){
 		var user = $(this).find('.username').text();
-		console.log(user);
 		user = user.trim();
 		if(blocked.indexOf(user) > -1){
 	    	$(this).remove();
