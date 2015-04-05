@@ -12,7 +12,7 @@
 
 // ==/UserScript==
 
-var blocked = ["Akemi_Ayu"]
+var blocked = ["Akemi_Ayu"];
 
 function removePosts(){
 	$.each($('.story'), function(){
