@@ -38,9 +38,3 @@ function removeComments () {
 setInterval(function() {
 	removePosts();
 }, 300);
-
-$(window).scroll(function() {
-   if($(window).scrollTop() + $(window).height() == $(document).height()) {
-       removePosts();
-   }
-});
