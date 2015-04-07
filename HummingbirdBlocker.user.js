@@ -2,8 +2,8 @@
 // @name        HummingbirdBlocker
 // @namespace   HummingbirdBlocker
 // @description HummingbirdBlocker
-// @updateURL https://github.com/Epictek/Hummingbird-scripts/HummingbirdBlocker.user.js
-// @downloadURL https://github.com/Epictek/Hummingbird-scripts/HummingbirdBlocker.user.js
+// @updateURL https://github.com/Epictek/Hummingbird-scripts/raw/master/HummingbirdBlocker.user.js
+// @downloadURL https://github.com/Epictek/Hummingbird-scripts/raw/master/HummingbirdBlocker.user.js
 // @version     1
 // @run-at document-end
 // @grant		none
