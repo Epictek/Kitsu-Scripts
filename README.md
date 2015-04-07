@@ -6,7 +6,7 @@ Find users that are not mutualy following you.
 
 $.getScript("https://rawgit.com/Epictek/Hummingbird-scripts/master/followers.js")
 
-# How to use these scripts
+# How to use the above scripts
 1. On the hummingbird site press f12
 2. click Console
 3. Here paste the code associated with the script for example
