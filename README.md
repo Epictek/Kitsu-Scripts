@@ -13,7 +13,8 @@ $.getScript("https://rawgit.com/Epictek/Hummingbird-scripts/master/followers.js"
 $.getScript("https://rawgit.com/Epictek/Hummingbird-scripts/master/followers.js")
 4. Press enter and the script should then run
 
-# HummingbirdBlocker.user.js
+#Userscripts
+## HummingbirdBlocker.user.js
 This a simple userscript to placebo block users. To add users to the blocking list you must edit the 'blocked' array.
 Very badly coded, but it werks. May lag a bit?
 
