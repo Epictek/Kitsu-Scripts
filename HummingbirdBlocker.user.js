@@ -12,7 +12,7 @@
 
 // ==/UserScript==
 
-var blocked = ["Akemi_Ayu"];
+var blocked = ["Akemi_Ayu", "SomeOtherFaggot"];
 
 function removeStuff(){
 	$.each($('.story'), function(){
@@ -31,7 +31,7 @@ function removeStuff(){
 	});
 }
 
-//If someone knows a better way to hangle ember route changes please let me know!
+//If someone knows a better way to handle ember route changes please let me know!
 setInterval(function() {
 	removeStuff();
 }, 300);
