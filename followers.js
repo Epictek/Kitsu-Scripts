@@ -12,6 +12,7 @@ var username = getUser();
 var followerspage = 1;
 var followers = [];
 var a = false;
+var safeList = ["ntaig", "epictek"];
 
 var getFollowers = setInterval(function() {
     $.get("https://hummingbird.me/users?followers_of=" + username + "&page=" + followerspage, function(data) {
@@ -55,7 +56,7 @@ function getNonFollowers() {
     if (a === true && b === true) {
         var nonFollowers = [];
         $.each(following, function(i, value) {
-            if ($.inArray(value, followers) == -1) {
+            if ($.inArray(value, followers) == -1 && $.inArray(value, safeList) == -1) {
                 nonFollowers.push(value);
                 console.log("Non follower: " + value);
             }
